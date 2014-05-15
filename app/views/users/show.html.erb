@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= editable_field @user, :name %>
+</p>
+
+<p>
+  <b>Gmail:</b>
+  <%= editable_field @user, :gmail %>
+</p>
+
+<p>
+  <b>Pincode:</b>
+  <%= editable_field @user,:pincode,{  :type => 'wysiwyg',
+                                         :rows => 10,
+                                         :cols => 80,
+                                         :submit => 'k',
+                                         :onblur => 'ignore',
+                                         :wysiwyg => { :debug => false }
+                                       } %>
+ %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
