@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'therubyracer'
 gem 'execjs'
 gem 'jeditable_wysiwyg_rails', :git => 'git://github.com/pjmorse/jeditable-wysiwyg-rails.git'
+gem 'tinymce-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

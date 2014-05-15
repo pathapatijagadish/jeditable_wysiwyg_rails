@@ -2,23 +2,33 @@
 
 <p>
   <b>Name:</b>
-  <%= editable_field @user, :name %>
+  <div>
+  <%= editable_field @user, :name,{    :rows => 10,
+                                         :cols => 80,
+                                         :submit => 'Ok',
+                                         :onblur => 'ignore',
+                                    } %>
+  </div>
 </p>
 
 <p>
   <b>Gmail:</b>
-  <%= editable_field @user, :gmail %>
+  <%= editable_field @user, :gmail ,{    :rows => 10,
+                                         :cols => 80,
+                                         :submit => 'Ok',
+                                         :onblur => 'ignore',
+                                         :tooltip => 'Click to edit...'
+                                    } %>
 </p>
 
 <p>
   <b>Pincode:</b>
-  <%= editable_field @user,:pincode,{  :type => 'wysiwyg',
+  <%= editable_field @user,:pincode,{    :type =>'wysiwyg',
                                          :rows => 10,
                                          :cols => 80,
-                                         :submit => 'k',
+                                         :submit => 'Ok',
                                          :onblur => 'ignore',
-                                         :wysiwyg => { :debug => false }
-                                       } %>
+                                    } %>
  %>
 </p>
 
